@@ -2,6 +2,10 @@
 
 This is a sample microservice implementation showcasing multiple services communicating via a gateway service thats running on port 8100
 
+### Prerequisites
+ - The application is designed around to run on PostgreSQL as the database so make sure you have a PostgreSQL db created with the name `eretail_cloud_db`
+ - Please refer the `application-dev.properties` in `eretail-customer-service` and `eretail-management-service` for more configurations
+
 ### Steps to run
  1. First run the service registry `eretail-service-registry` which will run on port `8761`
  2. Then run the gateway `eretail-api-gateway` which will run on port `8100`
