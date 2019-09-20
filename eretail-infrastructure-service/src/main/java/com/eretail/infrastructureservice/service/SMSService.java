@@ -3,7 +3,7 @@
  */
 package com.eretail.infrastructureservice.service;
 
-import com.needle.dtos.SMSNotificationDto;
+import com.eretail.core.dtos.SMSNotificationDto;
 
 /**
  * @author sandeepknair

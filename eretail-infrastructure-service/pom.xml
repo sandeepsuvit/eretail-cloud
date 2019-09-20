@@ -14,8 +14,8 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>com.needle</groupId>
-			<artifactId>needle-core</artifactId>
+			<groupId>com.eretail</groupId>
+			<artifactId>eretail-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 

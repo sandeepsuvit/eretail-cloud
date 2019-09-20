@@ -5,8 +5,8 @@ package com.eretail.infrastructureservice.service.impl;
 
 import org.springframework.stereotype.Service;
 
+import com.eretail.core.dtos.EmailNotificationDto;
 import com.eretail.infrastructureservice.service.EmailService;
-import com.needle.dtos.EmailNotificationDto;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -3,7 +3,7 @@
  */
 package com.eretail.infrastructureservice.service;
 
-import com.needle.dtos.EmailNotificationDto;
+import com.eretail.core.dtos.EmailNotificationDto;
 
 /**
  * @author sandeepknair
