@@ -34,3 +34,6 @@ You can see all your services up and running by visiting the following url on yo
 ### Sample request to get all users from management
  - Fetch all registered users using `GET http://localhost:9200/api/ms/management`
  
+### Api documentation
+ - `http://localhost:8100/swagger-ui.html`
+ 

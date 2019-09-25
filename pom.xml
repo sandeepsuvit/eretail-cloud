@@ -26,6 +26,7 @@
 		<commons.io.version>2.6</commons.io.version>
 		<spring-cloud.version>Greenwich.SR2</spring-cloud.version>
 		<hibernate-types.version>2.3.5</hibernate-types.version>
+		<springfox.swagger.version>2.9.2</springfox.swagger.version>
 	</properties>
 
 	<!-- Manages all root dependencies for the project -->

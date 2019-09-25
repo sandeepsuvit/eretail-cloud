@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.eretail.managementservice.config.resource;
+package com.eretail.managementservice.resource;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.eretail.managementservice.config.resource.advice;
+package com.eretail.managementservice.resource.advice;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
