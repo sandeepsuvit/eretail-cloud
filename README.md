@@ -17,10 +17,10 @@ You can see all your services up and running by visiting the following url on yo
 
 ### Endpoints
  - `http://localhost:8100/api` is the eretail api gateway endpoint
- - `http://localhost:9100/api/cs/customers` is the endpoint to access customer microservice
+ - `http://localhost:8100/api/cs/customers` is the endpoint to access customer microservice
  - `http://localhost:8100/api/cs/customers/getAllUsers` is the endpoint to access management microservice endpoint from customer microservice (enabling microservice communication)
- - `http://localhost:9200/api/ms/management` is the endpoint to access management microservice
- - `http://localhost:9300/api/is` is the endpoint mapped for infrastructure services
+ - `http://localhost:8100/api/ms/management` is the endpoint to access management microservice
+ - `http://localhost:8100/api/is` is the endpoint mapped for infrastructure services
  
 ### Sample request to register new user
  - Register new customer using `POST http://localhost:8100/api/cs/customers`
