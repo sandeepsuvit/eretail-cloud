@@ -4,9 +4,12 @@
 package com.eretail.core.resource.advices;
 
 import java.util.Date;
+import java.util.stream.Collectors;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -87,6 +90,34 @@ public class BaseServiceExceptionHanlder extends ResponseEntityExceptionHandler 
 						.build();
 			    // @formatter:on
 		return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
+	}
+	
+	/**
+	 * Error type: 400 <br/>
+	 * Handle all field validation messages
+	 * 
+	 * @param ex
+	 * @param request
+	 * @return
+	 */
+	@Override
+	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+			HttpHeaders headers, HttpStatus status, WebRequest request) {
+	    
+	    String messages = ex.getBindingResult().getFieldErrors().stream()
+	    		.map(er -> er.getField() + ": " + er.getDefaultMessage())
+	    		.collect(Collectors.joining( ", " ));
+	    
+		// @formatter:off
+	    ErrorDetailsDto errorDetails = ErrorDetailsDto
+	    		.builder()
+	    		.timestamp(new Date())
+	    		.status(400)
+				.message(messages)
+				.details(request.getDescription(false))
+				.build();
+	    // @formatter:on
+	    return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
 	}
 
 	/**
