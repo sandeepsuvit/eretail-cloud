@@ -37,3 +37,9 @@ You can see all your services up and running by visiting the following url on yo
 ### Api documentation
  - `http://localhost:8100/swagger-ui.html`
  
+ ### Reference
+ - https://dzone.com/articles/centralized-documentation-in-microservice-spring-b
+ - https://programmer.help/blogs/routing-gateway-zuul-aggregating-api-documents-with-swagger-2.html
+ - https://piotrminkowski.wordpress.com/2017/04/14/microservices-api-documentation-with-swagger2/
+ - https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+ - https://piotrminkowski.wordpress.com/2017/02/05/part-1-creating-microservice-using-spring-cloud-eureka-and-zuul/
