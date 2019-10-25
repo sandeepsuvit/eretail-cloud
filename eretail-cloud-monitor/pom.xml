@@ -7,69 +7,52 @@
 		<artifactId>eretail-cloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>eretail-api-gateway</artifactId>
-	<name>eretail-api-gateway</name>
-
-	<packaging>jar</packaging>
-
+	
+	<artifactId>eretail-cloud-monitor</artifactId>
+	<name>eretail-cloud-monitor</name>
+	<description>Monitoring client for eretail using spring boot admin</description>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-		</dependency>
-		
-		<!-- Swagger -->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>${springfox.swagger.version}</version>
-		</dependency>
 		
 		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>${springfox.swagger.version}</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		
-		<!-- Spring boot admin client -->
+		<!-- Spring boot admin dependencies -->
+		<dependency>
+		    <groupId>de.codecentric</groupId>
+		    <artifactId>spring-boot-admin-starter-server</artifactId>
+		    <version>2.1.6</version>
+		</dependency>
+		
 		<dependency>
 		    <groupId>de.codecentric</groupId>
 		    <artifactId>spring-boot-admin-starter-client</artifactId>
 		    <version>2.1.6</version>
 		</dependency>
 	</dependencies>
-
+	
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!-- For Spring Boot applications the easiest way to show the version, is 
-					to use the build-info goal from the spring-boot-maven-plugin, which generates 
-					the META-INF/build-info.properties. -->
-				<executions>
-	                <execution>
-	                    <goals>
-	                        <goal>build-info</goal>
-	                    </goals>
-	                </execution>
-	            </executions>
 			</plugin>
 		</plugins>
 	</build>

@@ -72,12 +72,6 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- RabbitMQ -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
-		
 		<!-- Swagger -->
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -90,6 +84,13 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${springfox.swagger.version}</version>
 		</dependency>
+		
+		<!-- Spring boot admin client -->
+		<dependency>
+		    <groupId>de.codecentric</groupId>
+		    <artifactId>spring-boot-admin-starter-client</artifactId>
+		    <version>2.1.6</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -97,6 +98,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- For Spring Boot applications the easiest way to show the version, is 
+					to use the build-info goal from the spring-boot-maven-plugin, which generates 
+					the META-INF/build-info.properties. -->
+				<executions>
+	                <execution>
+	                    <goals>
+	                        <goal>build-info</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
 			</plugin>
 		</plugins>
 	</build>

@@ -11,8 +11,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @author sandeepknair
  *
  */
-@SpringBootApplication
 @EnableEurekaServer
+@SpringBootApplication
 public class ERetailServiceRegistryRunner {
 
 	/**

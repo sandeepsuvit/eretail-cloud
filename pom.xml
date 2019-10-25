@@ -62,5 +62,6 @@
 		<module>eretail-infrastructure-service</module>
 		<module>eretail-api-gateway</module>
 		<module>eretail-service-registry</module>
+		<module>eretail-cloud-monitor</module>
 	</modules>
 </project>
