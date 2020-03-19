@@ -40,7 +40,7 @@ public class BaseServiceExceptionHanlder extends ResponseEntityExceptionHandler 
 			    ErrorDetailsDto errorDetails = ErrorDetailsDto
 			    		.builder()
 			    		.timestamp(new Date())
-			    		.status(404)
+			    		.status(HttpStatus.NOT_FOUND.value())
 						.message(ex.getMessage())
 						.details(request.getDescription(false))
 						.build();
@@ -62,7 +62,7 @@ public class BaseServiceExceptionHanlder extends ResponseEntityExceptionHandler 
 			    ErrorDetailsDto errorDetails = ErrorDetailsDto
 			    		.builder()
 			    		.timestamp(new Date())
-			    		.status(403)
+			    		.status(HttpStatus.FORBIDDEN.value())
 						.message(ex.getMessage())
 						.details(request.getDescription(false))
 						.build();
@@ -84,7 +84,7 @@ public class BaseServiceExceptionHanlder extends ResponseEntityExceptionHandler 
 			    ErrorDetailsDto errorDetails = ErrorDetailsDto
 			    		.builder()
 			    		.timestamp(new Date())
-			    		.status(400)
+			    		.status(HttpStatus.BAD_REQUEST.value())
 						.message(ex.getMessage())
 						.details(request.getDescription(false))
 						.build();
@@ -112,7 +112,7 @@ public class BaseServiceExceptionHanlder extends ResponseEntityExceptionHandler 
 	    ErrorDetailsDto errorDetails = ErrorDetailsDto
 	    		.builder()
 	    		.timestamp(new Date())
-	    		.status(400)
+	    		.status(HttpStatus.BAD_REQUEST.value())
 				.message(messages)
 				.details(request.getDescription(false))
 				.build();
@@ -133,7 +133,7 @@ public class BaseServiceExceptionHanlder extends ResponseEntityExceptionHandler 
 		// @formatter:off
 				ErrorDetailsDto errorDetails = ErrorDetailsDto.builder()
 						.timestamp(new Date())
-						.status(500)
+						.status(HttpStatus.INTERNAL_SERVER_ERROR.value())
 						.message(ex.getMessage())
 						.details(request.getDescription(false))
 						.build();

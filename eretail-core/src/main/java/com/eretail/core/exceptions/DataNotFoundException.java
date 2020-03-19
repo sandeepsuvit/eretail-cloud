@@ -7,7 +7,7 @@ package com.eretail.core.exceptions;
  * @author sandeepknair
  *
  */
-public class DataNotFoundException extends Exception {
+public class DataNotFoundException extends RuntimeException {
 
 	/**
 	 * 

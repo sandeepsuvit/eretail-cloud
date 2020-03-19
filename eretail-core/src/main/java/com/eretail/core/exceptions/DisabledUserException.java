@@ -7,7 +7,7 @@ package com.eretail.core.exceptions;
  * @author sandeepknair
  *
  */
-public class DisabledUserException extends Exception {
+public class DisabledUserException extends RuntimeException {
 
 	/**
 	 * 

@@ -7,7 +7,7 @@ package com.eretail.core.exceptions;
  * @author sandeepknair
  *
  */
-public class InvalidArgumentException extends Exception {
+public class InvalidArgumentException extends RuntimeException {
 
 	/**
 	 * 
