@@ -23,7 +23,7 @@
 		<java.version>1.8</java.version>
 		<usertypes.core.version>6.0.1.GA</usertypes.core.version>
 		<commons.lang3.version>3.9</commons.lang3.version>
-		<commons.io.version>2.6</commons.io.version>
+		<commons.io.version>2.7</commons.io.version>
 		<spring-cloud.version>Greenwich.SR2</spring-cloud.version>
 		<hibernate-types.version>2.3.5</hibernate-types.version>
 		<springfox.swagger.version>2.9.2</springfox.swagger.version>
